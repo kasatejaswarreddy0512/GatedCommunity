@@ -2,11 +2,7 @@ package com.jsp.GatedCommunity.services;
 
 import com.jsp.GatedCommunity.Entity.User;
 import com.jsp.GatedCommunity.Repository.UserRepository;
-import com.jsp.GatedCommunity.helper.ResponseStructure;
-import org.hibernate.annotations.NotFound;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,14 +14,6 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-//    public ResponseStructure<User> saveUser(User user){
-//        userRepository.save(user);
-//        ResponseStructure<User> rs=new ResponseStructure<>();
-//        rs.setStatusCode(HttpStatus.CREATED.value());
-//        rs.setData(user);
-//        rs.setMessage("User Data Successfully....!");
-//        return rs;
-//    }
 
     public User saveUser(User user){
         return userRepository.save(user);
